@@ -1,0 +1,35 @@
+enum Seasons{
+    yaz, yay, payiz, qis ;
+}
+public class Main {
+    Seasons season;
+    public Main(Seasons season){
+        this.season = season;
+    }
+    public void switcher(){
+        switch (season){
+            case yaz:
+                System.out.println("zor");
+                break;
+            case yay:
+                System.out.println("pecat");
+                break;
+            case payiz:
+                System.out.println("bele de");
+                break;
+            case qis:
+                System.out.println("maraqli");
+                break;
+        }
+    }
+    public static void main(String[] args) {
+      
+        Main birinci = new Main(Seasons.yaz);
+        birinci.switcher();
+        Main ikinci = new Main(Seasons.yay);
+        ikinci.switcher();
+        Main ucuncu = new Main(Seasons.payiz);
+        ucuncu.switcher();
+        Main dorduncu = new Main(Seasons.qis);
+        dorduncu.switcher();
+    }}
