@@ -1,0 +1,30 @@
+ public static int search(int[] nums, int target) {
+        int[] rotArray = rotatedArray(nums);
+        int a=0;
+        for (int i = 0; i < rotArray.length; i++) {
+            if (rotArray[i]==target){
+                a=i;
+                break;
+            }
+        }
+        Arrays.sort(nums);
+        int result = Arrays.binarySearch(nums, target);
+        return result>=0?a:-1;
+    }
+
+    public static int[] rotatedArray(int[] array){
+        Random random = new Random();
+        int[] rotatedArray = new int[array.length];
+        int k = random.nextInt(1, array.length);
+        int j=0; int z= array.length-k;
+        for(int i=k; i< array.length;i++){
+            rotatedArray[j]=array[i];
+            j++;
+        }
+        for (int i = 0; i < k; i++) {
+            rotatedArray[z]=array[i];
+            z++;
+        }
+
+        return rotatedArray;
+    }
