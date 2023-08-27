@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double a = scanner.nextInt();
+        double b = scanner.nextInt();
+        double c = scanner.nextInt();
+        double discriminant = (b * b) - (4 * a * c);
+        if (discriminant>0){
+            System.out.println("have two different roots");
+            double x1=(-b+Math.sqrt(discriminant))/(2*a);
+            double x2=(-b-Math.sqrt(discriminant))/(2*a);
+            System.out.println("x1 = "+ x1);
+            System.out.println("x2 = "+ x2);
+            System.out.println("discriminant = "+ discriminant);
+        }else if (discriminant==0){
+            System.out.println("have two equal roots");
+            double x= -b/(2*a);
+            System.out.println("x1 = x2 = " + x);
+            System.out.println("discriminant = "+ discriminant);
+        }else{
+            System.out.println("no real roots");
+            System.out.println("discriminant = "+ discriminant);
+        }
+    }}
