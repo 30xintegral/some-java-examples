@@ -1,0 +1,44 @@
+public class ComplexNumbers {
+    private double real;
+    private double imaginary;
+
+    // Constructor
+    public ComplexNumbers(double real, double imaginary) {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+
+    // Getter methods
+    public double getReal() {
+        return real;
+    }
+
+    public double getImaginary() {
+        return imaginary;
+    }
+
+    // Method to add complex numbers with separate real and imaginary parts
+    public void add(double real, double imaginary) {
+        this.real += real;
+        this.imaginary += imaginary;
+    }
+
+    // Method to add complex numbers with ComplexNumber object
+    public void add(ComplexNumbers other) {
+        this.real += other.real;
+        this.imaginary += other.imaginary;
+    }
+
+    // Method to subtract complex numbers with separate real and imaginary parts
+    public void subtract(double real, double imaginary) {
+        this.real -= real;
+        this.imaginary -= imaginary;
+    }
+
+    // Method to subtract complex numbers with ComplexNumber object
+    public void subtract(ComplexNumbers other) {
+        this.real -= other.real;
+        this.imaginary -= other.imaginary;
+    }
+
+}
