@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double azn;
+        double usd;
+        byte click;
+        System.out.println("if azn to usd then press '1' else press '2' ");
+        click = scanner.nextByte();
+        switch (click) {
+            case 1 -> {
+                System.out.println("How many manats do you want to convert? ");
+                azn = scanner.nextDouble();
+                usd = azn * 0.59;
+                System.out.println(azn + " ₼ =" + usd + " $");
+            }
+            case 2 -> {
+                System.out.println("How many dollars do you want to convert? ");
+                usd = scanner.nextDouble();
+                azn = usd * 1.7;
+                System.out.println(usd + " $ =" + azn + " ₼");
+            }
+            default -> System.out.println("Error");
+        }
+    }}
